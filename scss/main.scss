@@ -10,5 +10,19 @@ $font-weights: (
 body {
   background-color: $primary-color; //using of variables
   color: $text-color;
-  font-weight: map-get($font-weights, bold);
+}
+
+.main {
+  width: 80%;
+  margin: 0 auto;
+
+  #{&}-paragraph {
+    // #{&} bermakna bahwa class main-paragraph berada di dalam .main
+    font-weight: map-get($font-weights, bold); //using map
+
+    &:hover {
+      // simbol & bermakna parents. maka disini & = .main .main-paragraph
+      color: palevioletred;
+    }
+  }
 }
