@@ -1,6 +1,10 @@
 @import "./resets";
 @import "./variables";
 
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
 body {
   background-color: $primary-color; //using of variables
   color: $text-color;
@@ -12,7 +16,8 @@ body {
 
   #{&}-paragraph {
     // #{&} bermakna bahwa class main-paragraph berada di dalam .main
-    font-weight: map-get($font-weights, bold); //using map
+    // font-weight: map-get($font-weights, bold); //using map
+    font-weight: weight(regular); //using function
 
     &:hover {
       // simbol & bermakna parents. maka disini & = .main .main-paragraph
