@@ -31,12 +31,16 @@ body {
   align-items: center;
 }
 
-.main .main-paragraph {
+.main .main-paragraph1, .main .main-paragraph2 {
   font-weight: 400;
 }
 
-.main .main-paragraph:hover {
+.main .main-paragraph1:hover, .main .main-paragraph2:hover {
   color: palevioletred;
+}
+
+.main .main-paragraph2:hover {
+  color: #ff652f;
 }
 
 @media (max-width: 800px) {

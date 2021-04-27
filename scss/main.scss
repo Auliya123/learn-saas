@@ -37,7 +37,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  #{&}-paragraph {
+  #{&}-paragraph1 {
     // #{&} bermakna bahwa class main-paragraph berada di dalam .main
     // font-weight: map-get($font-weights, bold); //using map
     font-weight: weight(regular); //using function
@@ -45,6 +45,14 @@ body {
     &:hover {
       // simbol & bermakna parents. maka disini & = .main .main-paragraph
       color: palevioletred;
+    }
+  }
+
+  #{&}-paragraph2 {
+    @extend .main-paragraph1;
+
+    &:hover {
+      color: $accent-color;
     }
   }
 
