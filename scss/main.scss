@@ -31,7 +31,7 @@ body {
 
 .main {
   @include flexCenter(row);
-  width: 80%;
+  width: 80% - 40%; //calculation using sass . this code same as calc(80%-40%)
   margin: 0 auto;
   display: flex;
   justify-content: center;
